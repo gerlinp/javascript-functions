@@ -1,8 +1,11 @@
-function getRandomNumber() {
-    const randomNumber = Math.floor( Math.random() * 6 ) + 1;
+function getRandomNumber(upper) {
+    const randomNumber = Math.floor( Math.random() * upper ) + 1;
     return randomNumber;
 }
 
-getRandomNumber();
+console.log(getRandomNumber(6) );
+console.log(getRandomNumber(100) );
+console.log(getRandomNumber(1000) );
+console.log(getRandomNumber(20) );
 
 
