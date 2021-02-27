@@ -6,8 +6,16 @@
  * @return {number} The random number value.
  */
 
-Math.floor(Math.random() * (6 - 1 + 1)) + 1;
+ function getRandomNumber (lower, upper) {
+     if ( isNaN(lower) || isNaN(upper) ) {
+        throw error('Both arguments must be numbers.')
+     }
+     return Math.floor(Math.random() * (upper - lower + 1)) + lower; 
+ }
 
+console.log( getRandomNumber(5, 20) );
+console.log(`${getRandomNumber(10, 100)} is arandom number between 10 and 100 `);
+console.log( getRandomNumber(200, 'three hundred') );
 // Call the function and pass it different values
 
 
